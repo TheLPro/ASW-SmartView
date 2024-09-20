@@ -1,0 +1,45 @@
+@import url(fonts.css);
+
+:root {
+    --primary: #007bff;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    border: 2px solid var(--primary);
+
+    width: 300px !important;
+    height: 400px !important;
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.title {
+    font-size: 1.5em;
+}
+#settings {
+    fill: var(--primary);
+    width: 20px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.optionscontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.options {
+    border: 2px solid var(--primary);
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
