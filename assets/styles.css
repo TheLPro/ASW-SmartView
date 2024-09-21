@@ -1,10 +1,10 @@
 @import url(fonts.css);
+@import url(scrollbar.css);
+@import url(global.css);
 
-:root {
-    --primary: #007bff;
-}
 * {
     box-sizing: border-box;
+    font-weight: 400;
 }
 body {
     font-family: 'Poppins';
@@ -12,8 +12,15 @@ body {
     padding: 0;
     border: 2px solid var(--primary);
 
-    width: 300px !important;
-    height: 400px !important;
+    width: 800px !important;
+    height: 600px !important;
+}
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+a:hover {
+    text-decoration: underline;
 }
 .top {
     display: flex;
@@ -22,24 +29,235 @@ body {
     gap: 20px;
 }
 .title {
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: 700;
 }
 #settings {
     fill: var(--primary);
-    width: 20px;
+    width: 30px;
     top: 0;
     right: 0;
     cursor: pointer;
 }
-.optionscontainer {
+.dashboard {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
-.options {
-    border: 2px solid var(--primary);
-    outline: none;
+
+.container {
+    background-color: var(--background);
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--primary);
     border-radius: 10px;
     padding: 10px;
-    cursor: pointer;
+    min-width: 200px;
+    font-size: 0.8em;
+    text-align: center;
+}
+.ctitle {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: center;
+    cursor: move;
+    color: var(--primary-contrast);
+    background-color: var(--primary);
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+/* time remaining */
+
+#tr {
+    width: 300px;
+    height: 140px;
+}
+
+.trbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.trend {
+    font-size: 1.1em;
+}
+#trnum {
+    font-size: 2em;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* next class */
+
+.ncbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color);
+    color: var(--background);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    font-size: 1em;
+}
+
+.ncname {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.ncroom {
+    margin-top: -5px;
+}
+.ncse {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+/* homework */
+
+#hw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 240px;
+    height: 500px;
+}
+.hwlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.hwassignment {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color);
+    color: var(--background);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    font-size: 1em;
+}
+.hwname {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.hwdue {
+    margin-top: -5px;
+}
+.hwopen {
+    margin-top: 7px;
+}
+
+/* managebac events */ 
+
+#mb {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 10px;
+    width: 300px;
+    height: 353px;
+}
+.mbevents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.mbevent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color);
+    color: var(--background);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    font-size: 1em;
+}
+#mbname {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+#mbdate {
+    margin-top: -5px;
+}
+.mbopen {
+    margin-top: 7px;
+}
+
+/* recent grades */
+
+#rg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    width: 200px;
+    height: 280px;
+}
+.rggrades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.rggrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color);
+    color: var(--background);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    font-size: 1em;
+}
+#rgname {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+#rgdate {
+    margin-top: -5px;
+    font-size: 0.8em;
+}
+#rgnum {
+    font-size: 2em;
+}
+#rgopen {
+    margin-top: 7px;
 }
